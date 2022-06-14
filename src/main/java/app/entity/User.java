@@ -5,15 +5,13 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
 @Entity
+@Table(name = "myUser")
 public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
